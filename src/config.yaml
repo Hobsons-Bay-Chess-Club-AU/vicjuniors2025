@@ -70,3 +70,14 @@ analytics:
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+
+tournament:
+  isRegistrationClose: false
+  registrationUrl: 'https://www.trybooking.com/events/landing/xxxxxx'
+  u8Open:
+    stats:
+      registered: 100
+      ratingAverage: 888
+      rated: 15
+      unrated: 85
+    vegaUrl: https://tournament.hobsonsbaychess.com/www2025HobsonsBayPurdyCupJuniors/

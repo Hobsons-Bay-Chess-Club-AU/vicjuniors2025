@@ -1,0 +1,90 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+import Hero from "~/components/widgets/Hero.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
+import Sponsor from "~/components/widgets/Sponsors.astro";
+import Features2 from "~/components/widgets/Features2.astro";
+import Stats from "~/components/widgets/Stats.astro";
+import { TOURNAMENT } from "astrowind:config";
+const metadata = {
+  title: "Startup Landing Page",
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Under 8"
+    actions={[
+      {
+        variant: "primary",
+        target: "_blank",
+        text: "View full page",
+        href: TOURNAMENT.u8Open.vegaUrl,
+        icon: "tabler:download",
+      },
+      { text: "Learn more", href: "#features" },
+    ]}
+  >
+    <Fragment slot="title"> U8 Division: Rising Stars of Chess! </Fragment>
+
+    <Fragment slot="subtitle">
+      This division highlights the next generation of chess champions, offering
+      them the opportunity to compete, learn, and grow in a fun and competitive
+      environment. Watch as these rising stars make their mark and inspire
+      future generations
+    </Fragment>
+
+    <Fragment slot="image">
+      <iframe
+        width="100%"
+        height="800px"
+        src="https://tournament.hobsonsbaychess.com/www2025HobsonsBayPurdyCupJuniors/"
+      ></iframe>
+    </Fragment>
+  </Hero>
+
+  <Stats
+    title="Under 8 - Open insights"
+    subtitle="Below are some quick statistics for the Under 8 division."
+    stats={[
+      { title: "Register", amount: TOURNAMENT.u8Open.stats.registered },
+      { title: "Rated", amount: TOURNAMENT.u8Open.stats.rated },
+      {
+        title: "Player Ratings",
+        amount: TOURNAMENT.u8Open.stats.ratingAverage,
+      },
+      { title: "Unrated count", amount: TOURNAMENT.u8Open.stats.unrated },
+    ]}
+  />
+
+  <!-- Brands Widget ****************** -->
+  <Sponsor />
+
+  <!-- CallToAction Widget *********** -->
+  {
+    !TOURNAMENT.isRegistrationClose ? (
+      <CallToAction
+        actions={[
+          {
+            variant: "primary",
+            target: "_blank",
+            text: "Register",
+            href: TOURNAMENT.registrationUrl,
+            icon: "tabler:download",
+          },
+        ]}
+      >
+        <Fragment slot="title">Be a part of U8 tournament</Fragment>
+
+        <Fragment slot="subtitle">
+          Sign up now for the U8 Division and give your young chess star the
+          chance to compete, learn, and grow! This is the perfect opportunity
+          for young players to showcase their skills and join a community of
+          rising champions. Don’t miss out—register today!
+        </Fragment>
+      </CallToAction>
+    ) : null
+  }
+</Layout>

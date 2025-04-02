@@ -2,6 +2,16 @@ import merge from 'lodash.merge';
 
 import type { MetaData } from '~/types';
 
+export interface DivisionConfig {
+  register: number;
+  vegaUrl: string;
+}
+
+export interface TournamentConfig {
+  isRegistrationClose: boolean;
+  registrationUrl: string;
+  u8Open: DivisionConfig;
+}
 export type Config = {
   site?: SiteConfig;
   metadata?: MetaDataConfig;
@@ -11,6 +21,7 @@ export type Config = {
   };
   ui?: unknown;
   analytics?: unknown;
+  tournament?: TournamentConfig;
 };
 
 export interface SiteConfig {
@@ -193,6 +204,12 @@ const getAnalytics = (config: Config) => {
   return merge({}, _default, config?.analytics ?? {}) as AnalyticsConfig;
 };
 
+const getTournament = (config: Config) => {
+  const _default = {};
+
+  return merge({}, _default, config?.tournament ?? {}) as TournamentConfig;
+};
+
 export default (config: Config) => ({
   SITE: getSite(config),
   I18N: getI18N(config),
@@ -200,4 +217,5 @@ export default (config: Config) => ({
   APP_BLOG: getAppBlog(config),
   UI: getUI(config),
   ANALYTICS: getAnalytics(config),
+  TOURNAMENT: getTournament(config),
 });
