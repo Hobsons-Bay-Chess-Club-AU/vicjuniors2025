@@ -7,9 +7,7 @@ import Stats from "~/components/widgets/Stats.astro";
 import { TOURNAMENT } from "astrowind:config";
 import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
 import type { DivisionConfig } from "vendor/integration/utils/configBuilder";
-const metadata = {
-  title: "Startup Landing Page",
-};
+
 export const getStaticPaths = (async ({ paginate }) => {
   const list = Object.values(TOURNAMENT).filter(
     (x: DivisionConfig) => x.code
@@ -25,6 +23,10 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 const { name, stats, vegaUrl, title, description } = Astro.props as Props;
 const statsTitle = `${name} Insights`;
+
+const metadata = {
+  title: "2025 Victorian Junior chess championship - " + name,
+};
 ---
 
 <Layout metadata={metadata}>

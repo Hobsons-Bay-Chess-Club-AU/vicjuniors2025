@@ -33,15 +33,19 @@ export const headerData = {
       links: [
         {
           text: 'Schedules',
-          href: getPermalink('/division/u8-open'),
+          href: getPermalink('/tournament/schedules'),
         },
         {
           text: 'Rules & Regulation',
-          href: getPermalink('/division/u8-open'),
+          href: getPermalink('/tournament/rules'),
         },
         {
           text: 'Registration',
-          href: getPermalink('/division/u8-girl'),
+          href: getPermalink('/tournament/registration'),
+        },
+        {
+          text: 'Venue',
+          href: getPermalink('/tournament/venue'),
         },
       ],
     },
@@ -96,19 +100,19 @@ export const headerData = {
       // ],
     },
     {
-      text: 'Travel & Accommodation',
+      text: 'Supports',
       links: [
         {
           text: 'Travel',
-          href: getPermalink('/landing/lead-generation'),
+          href: getPermalink('/other/travel'),
         },
         {
           text: 'Accommodation',
-          href: getPermalink('/landing/sales'),
+          href: getPermalink('/other/Accommodation'),
         },
         {
           text: 'Parking',
-          href: getPermalink('/landing/click-through'),
+          href: getPermalink('/other/parking'),
         },
         // {
         //   text: 'Product Details (or Services)',
@@ -161,34 +165,47 @@ export const footerData = {
   links: [
     {
       title: 'Division',
+      links: list.map((item) => ({
+        text: item.name,
+        href: getPermalink('/division/' + item.code),
+      })),
+    },
+    {
+      title: 'Tournament',
       links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
-        { text: 'Enterprise', href: '#' },
-        { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
+        {
+          text: 'Schedules',
+          href: getPermalink('/tournament/schedules'),
+        },
+        {
+          text: 'Rules & Regulation',
+          href: getPermalink('/tournament/rules'),
+        },
+        {
+          text: 'Registration',
+          href: getPermalink('/tournament/registration'),
+        },
+        {
+          text: 'Venue',
+          href: getPermalink('/tournament/venue'),
+        },
       ],
     },
     {
-      title: 'Rule',
+      title: 'Supports',
       links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
-      ],
-    },
-    {
-      title: 'Support',
-      links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Community Forum', href: '#' },
-        { text: 'Professional Services', href: '#' },
-        { text: 'Skills', href: '#' },
-        { text: 'Status', href: '#' },
+        {
+          text: 'Travel',
+          href: getPermalink('/other/travel'),
+        },
+        {
+          text: 'Accommodation',
+          href: getPermalink('/other/Accommodation'),
+        },
+        {
+          text: 'Parking',
+          href: getPermalink('/other/parking'),
+        },
       ],
     },
     // {

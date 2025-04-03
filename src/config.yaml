@@ -1,9 +1,8 @@
 site:
   name: 2025 VJCC
-  site: 'https://astrowind.vercel.app'
+  site: 'https://2025vjcc.netlify.app'
   base: '/'
   trailingSlash: false
-
   googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
 
 # Default SEO metadata
@@ -11,14 +10,14 @@ metadata:
   title:
     default: Victorian Junior championship 2025
     template: '%s — ChessVictoria'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+  description: "\U0001F680 Join the most exciting junior chess tournament, featuring talented young players from U8 to U18. Watch future champions compete, track rankings, and celebrate the rising stars of chess!."
   robots:
     index: true
     follow: true
   openGraph:
     site_name: Victorian Junior championship 2025
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/cv.png'
         width: 1200
         height: 628
     type: website
@@ -162,6 +161,50 @@ tournament:
     code: 'u14-girl'
     title: 'Aspiring Queens'
     description: 'Showcases the talented young girls in the U14 category who are refining their skills and embracing more advanced strategic play. At this stage, they display deep calculation abilities, strong positional understanding, and the confidence to compete at higher levels. With every game, they continue to grow, proving their potential to become future leaders in the chess world.'
+    stats:
+      registered: 100
+      ratingAverage: 888
+      rated: 15
+      unrated: 85
+    vegaUrl: https://tournament.hobsonsbaychess.com/www2025HBCCHonourableBobJuniors/
+  u16Open:
+    name: 'Under 16 - Open'
+    code: 'u16-open'
+    title: 'Skilled Strategists'
+    description: 'Represents the U16 players who have developed a deep understanding of the game and are mastering advanced strategies. At this stage, they exhibit strong tactical awareness, precise calculation, and the ability to adapt to complex positions. With growing experience in high-level competition, these young players are honing their skills, preparing to take on even greater challenges in their chess journey.'
+    stats:
+      registered: 100
+      ratingAverage: 888
+      rated: 15
+      unrated: 85
+    vegaUrl: https://tournament.hobsonsbaychess.com/www2025HobsonsBayPurdyCupJuniors/
+  u16Girl:
+    name: 'Under 16 - Girl'
+    code: 'u16-girl'
+    title: 'Skilled Queens'
+    description: 'Represents the talented young women in the U16 category who have sharpened their strategic thinking and competitive edge. At this stage, they demonstrate deep tactical awareness, strong positional play, and the ability to handle complex endgames. With each tournament, they gain valuable experience, proving their resilience and determination as they continue to rise in the chess world.'
+    stats:
+      registered: 100
+      ratingAverage: 888
+      rated: 15
+      unrated: 85
+    vegaUrl: https://tournament.hobsonsbaychess.com/www2025HBCCHonourableBobJuniors/
+  u18Open:
+    name: 'Under 18 - Open'
+    code: 'u18-open'
+    title: 'Skilled Strategists'
+    description: 'Highlights the exceptional players in the U18 category who are pushing the boundaries of the game. With a refined understanding of advanced strategies and an unwavering commitment to improvement, these young talents are setting the stage for their future success. Competing at the highest levels, they are shaping the future of chess, proving their skill, resilience, and leadership in the world of competitive play.'
+    stats:
+      registered: 100
+      ratingAverage: 888
+      rated: 15
+      unrated: 85
+    vegaUrl: https://tournament.hobsonsbaychess.com/www2025HobsonsBayPurdyCupJuniors/
+  u18Girl:
+    name: 'Under 18 - Girls'
+    code: 'u18-girl'
+    title: 'Skilled Queens'
+    description: 'celebrates the remarkable young women in the U18 category who are making their mark in the world of chess. With advanced strategies, exceptional tactical skills, and a fierce competitive spirit, these players are already proving themselves on the international stage. As they continue to break barriers and set new standards, they are inspiring the next generation of female chess players and leading the way for future success in the game.'
     stats:
       registered: 100
       ratingAverage: 888
