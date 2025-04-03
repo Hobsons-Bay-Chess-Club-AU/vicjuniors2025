@@ -5,6 +5,16 @@ import type { MetaData } from '~/types';
 export interface DivisionConfig {
   register: number;
   vegaUrl: string;
+  code: string;
+  name: string;
+  title: string;
+  description: string;
+  stats: {
+    registered: number;
+    ratingAverage: number;
+    rated: number;
+    unrated: number;
+  };
 }
 
 export interface TournamentConfig {

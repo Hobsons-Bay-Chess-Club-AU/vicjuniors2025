@@ -75,9 +75,96 @@ tournament:
   isRegistrationClose: false
   registrationUrl: 'https://www.trybooking.com/events/landing/xxxxxx'
   u8Open:
+    name: 'Under 8 - Open'
+    code: 'u8-open'
+    title: 'Rising Stars of Chess'
+    description: 'This division highlights the next generation of chess champions, offering
+      them the opportunity to compete, learn, and grow in a fun and competitive
+      environment. Watch as these rising stars make their mark and inspire
+      future generations'
     stats:
       registered: 100
       ratingAverage: 888
       rated: 15
       unrated: 85
     vegaUrl: https://tournament.hobsonsbaychess.com/www2025HobsonsBayPurdyCupJuniors/
+  u8Girl:
+    name: 'Under 8 - Girl'
+    code: 'u8-girl'
+    title: 'Rising Stars of Chess'
+    description: 'This division highlights the next generation of chess champions, offering
+      them the opportunity to compete, learn, and grow in a fun and competitive
+      environment. Watch as these rising stars make their mark and inspire
+      future generations'
+    stats:
+      registered: 100
+      ratingAverage: 888
+      rated: 15
+      unrated: 85
+    vegaUrl: https://tournament.hobsonsbaychess.com/www2025HobsonsBayPurdyCupJuniors/
+  u10Open:
+    name: 'Under 10 - Open'
+    code: 'u10-open'
+    title: 'Young Talents of Chess'
+    description: 'Celebrates the bright and determined minds in the U10 category who are rapidly developing their skills. At this stage, players showcase remarkable creativity, tactical sharpness, and a growing understanding of strategy. With each move, they demonstrate their potential to become future champions, making this an exciting age group to watch as they refine their game and embrace the spirit of competition'
+    stats:
+      registered: 100
+      ratingAverage: 888
+      rated: 15
+      unrated: 85
+    vegaUrl: https://tournament.hobsonsbaychess.com/www2025HobsonsBayPurdyCupJuniors/
+  u10Girl:
+    name: 'Under 10 - Girl'
+    code: 'u10-girl'
+    title: 'Young Queens of Chess'
+    description: 'Shines a spotlight on the talented young girls in the U10 category who are making their mark on the chessboard. At this stage, they display impressive creativity, tactical awareness, and a growing strategic mindset. With each move, they prove their potential to rise in the chess world, embracing competition with confidence and determination.'
+    stats:
+      registered: 100
+      ratingAverage: 888
+      rated: 15
+      unrated: 85
+    vegaUrl: https://tournament.hobsonsbaychess.com/www2025HBCCHonourableBobJuniors/
+  u12Open:
+    name: 'Under 12 - Open'
+    code: 'u12-open'
+    title: 'Promising Contenders'
+    description: ' represents the rising stars of the U12 category, where young players begin to refine their style and sharpen their strategic thinking. At this stage, they are not just learning the game—they are mastering complex tactics, deep calculations, and positional play. With growing confidence and competitive spirit, these talented contenders are on their way to making a name for themselves in the chess world.'
+    stats:
+      registered: 100
+      ratingAverage: 888
+      rated: 15
+      unrated: 85
+    vegaUrl: https://tournament.hobsonsbaychess.com/www2025HobsonsBayPurdyCupJuniors/
+  u12Girl:
+    name: 'Under 12 - Girl'
+    code: 'u12-girl'
+    title: 'Promising Queens'
+    description: 'highlights the talented young girls in the U12 category who are advancing their chess skills with determination and creativity. At this stage, they are developing deeper strategic understanding, mastering complex tactics, and showcasing resilience in competitive play. With each game, these rising stars grow in confidence, proving themselves as strong contenders for the future of chess.'
+    stats:
+      registered: 100
+      ratingAverage: 888
+      rated: 15
+      unrated: 85
+    vegaUrl: https://tournament.hobsonsbaychess.com/www2025HBCCHonourableBobJuniors/
+  u14Open:
+    name: 'Under 14 - Open'
+    code: 'u14-open'
+    title: 'Aspiring Masters'
+    description: 'Represents the dedicated and ambitious players in the U14 category who are taking their chess journey to the next level. At this stage, they demonstrate a strong grasp of strategy, deep calculation skills, and refined positional understanding. Competing at a higher level, these young talents are gaining valuable experience, sharpening their decision-making, and building the foundation to achieve mastery in the years ahead..'
+    stats:
+      registered: 100
+      ratingAverage: 888
+      rated: 15
+      unrated: 85
+    vegaUrl: https://tournament.hobsonsbaychess.com/www2025HobsonsBayPurdyCupJuniors/
+  u14Girl:
+    name: 'Under 14 - Girl'
+    code: 'u14-girl'
+    title: 'Aspiring Queens'
+    description: 'Showcases the talented young girls in the U14 category who are refining their skills and embracing more advanced strategic play. At this stage, they display deep calculation abilities, strong positional understanding, and the confidence to compete at higher levels. With every game, they continue to grow, proving their potential to become future leaders in the chess world.'
+    stats:
+      registered: 100
+      ratingAverage: 888
+      rated: 15
+      unrated: 85
+    vegaUrl: https://tournament.hobsonsbaychess.com/www2025HBCCHonourableBobJuniors/

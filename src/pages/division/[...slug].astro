@@ -1,0 +1,102 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+import Hero from "~/components/widgets/Hero.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
+import Sponsor from "~/components/widgets/Sponsors.astro";
+import Stats from "~/components/widgets/Stats.astro";
+import { TOURNAMENT } from "astrowind:config";
+import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
+import type { DivisionConfig } from "vendor/integration/utils/configBuilder";
+const metadata = {
+  title: "Startup Landing Page",
+};
+export const getStaticPaths = (async ({ paginate }) => {
+  const list = Object.values(TOURNAMENT).filter(
+    (x: DivisionConfig) => x.code
+  ) as DivisionConfig[];
+
+  return list.map((item) => ({
+    params: { slug: item.code },
+    props: { ...item },
+  }));
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { name, stats, vegaUrl, title, description } = Astro.props as Props;
+const statsTitle = `${name} Insights`;
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline={name}
+    actions={[
+      {
+        variant: "primary",
+        target: "_blank",
+        text: "View full page",
+        href: vegaUrl,
+        icon: "tabler:window-maximize",
+      },
+    ]}
+  >
+    <Fragment slot="title"> {title}</Fragment>
+
+    <Fragment slot="subtitle">
+      {description}
+    </Fragment>
+
+    <Fragment slot="image">
+      <iframe
+        width="100%"
+        height="800px"
+        src="https://tournament.hobsonsbaychess.com/www2025HobsonsBayPurdyCupJuniors/"
+      ></iframe>
+    </Fragment>
+  </Hero>
+
+  <Stats
+    title={statsTitle}
+    subtitle={"Below are some quick statistics for the " + name}
+    stats={[
+      { title: "Register", amount: stats.registered },
+      { title: "Rated", amount: stats.rated },
+      {
+        title: "Player Ratings",
+        amount: stats.ratingAverage,
+      },
+      { title: "Unrated count", amount: stats.unrated },
+    ]}
+  />
+
+  <!-- Brands Widget ****************** -->
+  <Sponsor />
+
+  <!-- CallToAction Widget *********** -->
+  {
+    !TOURNAMENT.isRegistrationClose ? (
+      <CallToAction
+        actions={[
+          {
+            variant: "primary",
+            target: "_blank",
+            text: "Register",
+            href: TOURNAMENT.registrationUrl,
+            icon: "tabler:shopping-cart",
+          },
+        ]}
+      >
+        <Fragment slot="title">Be a part of {name} tournament</Fragment>
+
+        <Fragment slot="subtitle">
+          Sign up now for the {name} and give your young chess star the chance
+          to compete, learn, and grow! This is the perfect opportunity for young
+          players to showcase their skills and join a community of rising
+          champions. Don’t miss out—register today!
+        </Fragment>
+      </CallToAction>
+    ) : null
+  }
+</Layout>

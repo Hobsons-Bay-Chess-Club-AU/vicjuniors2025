@@ -1,5 +1,8 @@
 import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 import { TOURNAMENT } from 'astrowind:config';
+
+const list = Object.values(TOURNAMENT).filter((x: DivisionConfig) => x.code) as DivisionConfig[];
+
 export const headerData = {
   links: [
     {
@@ -26,54 +29,71 @@ export const headerData = {
     },
 
     {
-      text: 'Schedules',
+      text: 'Tournament',
       links: [
         {
-          text: 'U12-U18',
+          text: 'Schedules',
           href: getPermalink('/division/u8-open'),
         },
         {
-          text: 'U8 & U10',
+          text: 'Rules & Regulation',
+          href: getPermalink('/division/u8-open'),
+        },
+        {
+          text: 'Registration',
           href: getPermalink('/division/u8-girl'),
         },
       ],
     },
     {
       text: 'Pairing & Results',
-      links: [
-        {
-          text: 'U8 Open',
-          href: getPermalink('/division/u8-open'),
-        },
-        {
-          text: 'U8 Girls',
-          href: getPermalink('/division/u8-girl'),
-        },
-        // {
-        //   text: 'Services',
-        //   href: getPermalink('/services'),
-        // },
-        // {
-        //   text: 'Pricing',
-        //   href: getPermalink('/pricing'),
-        // },
-        // {
-        //   text: 'About us',
-        //   href: getPermalink('/about'),
-        // },
-        // {
-        //   text: 'Contact',
-        //   href: getPermalink('/contact'),
-        // },
-        // {
-        //   text: 'Terms',
-        //   href: getPermalink('/terms'),
-        // },
-        // {
-        //   text: 'Privacy policy',
-        //   href: getPermalink('/privacy'),
-        // },
-      ],
+      links: list.map((item) => ({
+        text: item.name,
+        href: getPermalink('/division/' + item.code),
+      })),
+
+      //[
+      // {
+      //   text: 'U8 Open',
+      //   href: getPermalink('/division/u8-open'),
+      // },
+      // {
+      //   text: 'U8 Girls',
+      //   href: getPermalink('/division/u8-girl'),
+      // },
+      // {
+      //   text: 'U10 Open',
+      //   href: getPermalink('/division/u8-open'),
+      // },
+      // {
+      //   text: 'U10 Girls',
+      //   href: getPermalink('/division/u8-girl'),
+      // },
+      // {
+      //   text: 'Services',
+      //   href: getPermalink('/services'),
+      // },
+      // {
+      //   text: 'Pricing',
+      //   href: getPermalink('/pricing'),
+      // },
+      // {
+      //   text: 'About us',
+      //   href: getPermalink('/about'),
+      // },
+      // {
+      //   text: 'Contact',
+      //   href: getPermalink('/contact'),
+      // },
+      // {
+      //   text: 'Terms',
+      //   href: getPermalink('/terms'),
+      // },
+      // {
+      //   text: 'Privacy policy',
+      //   href: getPermalink('/privacy'),
+      // },
+      // ],
     },
     {
       text: 'Travel & Accommodation',

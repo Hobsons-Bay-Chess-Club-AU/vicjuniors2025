@@ -4,14 +4,13 @@ import Layout from "~/layouts/PageLayout.astro";
 import Hero from "~/components/widgets/Hero.astro";
 import Note from "~/components/widgets/Note.astro";
 import Features from "~/components/widgets/Features.astro";
-import Features2 from "~/components/widgets/Features2.astro";
 import Steps from "~/components/widgets/Steps.astro";
 import Content from "~/components/widgets/Content.astro";
 import BlogLatestPosts from "~/components/widgets/BlogLatestPosts.astro";
 import FAQs from "~/components/widgets/FAQs.astro";
 import Stats from "~/components/widgets/Stats.astro";
 import CallToAction from "~/components/widgets/CallToAction.astro";
-
+import { TOURNAMENT } from "astrowind:config";
 const metadata = {
   title: "Victorian Junior Chess Championships 2025",
   ignoreTitleTemplate: true,
@@ -26,7 +25,7 @@ const metadata = {
       {
         variant: "primary",
         text: "Registration",
-        href: "https://linktoregistration",
+        href: TOURNAMENT.registrationUrl,
         target: "_blank",
         icon: "tabler:user-edit",
       },
@@ -199,7 +198,7 @@ const metadata = {
 
   <FAQs
     title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
+    subtitle="Explore the following FAQs to learn more about chess tournaments, including rules, formats, and tips to enhance your competitive experience."
     tagline="FAQs"
     classes={{ container: "max-w-6xl" }}
     items={[
@@ -259,7 +258,7 @@ const metadata = {
       {
         variant: "primary",
         text: "Register now",
-        href: "https://github.com/onwidget/astrowind",
+        href: TOURNAMENT.registrationUrl,
         target: "_blank",
         icon: "tabler:download",
       },
